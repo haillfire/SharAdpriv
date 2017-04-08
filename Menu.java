@@ -10,16 +10,16 @@ public class Menu {
 		System.out.println("Bem vindo ao SharAd");
 		System.out.println("Aqui voce pode fazer seu projeto crescer!");
 		System.out.println("");
-		System.out.println("Digite o numero da funÁao desejada:");
-		System.out.println("1-InserÁao");
-		System.out.println("2-ExibiÁao de informaÁoes");
+		System.out.println("Digite o numero da fun√ßao desejada:");
+		System.out.println("1-Inser√ßao");
+		System.out.println("2-Exibi√ßao de informa√ßoes");
 		System.out.println("3-Busca");
-		System.out.println("4-RemoÁao");
+		System.out.println("4-Remo√ßao");
 		System.out.println("5-Sair");
 		System.out.println("------------------------------------");
 		t = (int)scan.nextInt();
-		while(t<1 || t>4){
-			System.out.println("Voce nao digitou uma opÁao valida");			
+		while(t<1 || t>5){
+			System.out.println("Voce nao digitou uma op√ßao valida");			
 		}
 		if(t==1){
 			menuInsercao();
@@ -32,32 +32,33 @@ public class Menu {
 		}else if(t==5){
 			System.out.println("Tem certeza que deseja sair?");
 			System.out.println("1-Sim");
-			System.out.println("2-N„o");
+			System.out.println("2-N√£o");
 			i = (int)scan.nextInt();
 			if(i==1){
 				flag = false;
 			}else if(i==2){
 				menu();
 			}else{
-				System.out.println("OpÁ„o inv·lida");
+				System.out.println("Op√ß√£o inv√°lida");
 				menu();
 			}
-		}
+		}scan.close();
 		}
 		
 	}
 	
-	//INSER«√O
+	//INSER√á√ÉO
 	//
 	//
 	//
 		private void menuInsercao(){
 			int t = 0;
 			Scanner scan = new Scanner(System.in);
-			System.out.println("Digite o numero da funÁao desejada:");
-			System.out.println("1-InserÁao Manual");
-			System.out.println("2-InserÁao via arquivo");
+			System.out.println("Digite o numero da fun√ßao desejada:");
+			System.out.println("1-Inser√ßao Manual");
+			System.out.println("2-Inser√ßao via arquivo");
 			System.out.println("3-Voltar ao menu");
+			t = (int)scan.nextInt();
 			if(t==1){
 				insercaoManual();
 			}else if(t==2){
@@ -65,40 +66,40 @@ public class Menu {
 			}else if(t==3){
 				menu();
 			}else{
-				System.out.println("Voce nao digitou uma opÁao valida");
+				System.out.println("Voce nao digitou uma op√ßao valida");
 				menuInsercao();
 			}
 			scan.close();
 		}
 		
 		private void insercaoManual(){
-			//FUN«√O
-			System.out.println("InserÁao Manual");
+			//FUN√á√ÉO
+			System.out.println("Inser√ßao Manual");
 			flag = false;
 		}
 		
 		private void insercaoArquivo(){
-			//FUN«√O
-			System.out.println("InserÁao via arquivo");
+			//FUN√á√ÉO
+			System.out.println("Inser√ßao via arquivo");
 			flag = false;
 		}
 	//
 	//
 	//	
-	//FIM DA INSER«√O
+	//FIM DA INSER√á√ÉO
 		
 		
 		
-	//EXIBI«√O
+	//EXIBI√á√ÉO
 	//
 	//
 	//
 		private void exibicao(){
 			int t = 0;
 			Scanner scan = new Scanner(System.in);
-			System.out.println("Digite o numero da funÁao desejada:");
-			System.out.println("1-ExibiÁao no console");
-			System.out.println("2-ExibiÁao via arquivo");
+			System.out.println("Digite o numero da fun√ßao desejada:");
+			System.out.println("1-Exibi√ßao no console");
+			System.out.println("2-Exibi√ßao via arquivo");
 			System.out.println("3-Voltar ao menu");
 			t = (int)scan.nextInt();		
 			if(t==1){
@@ -108,27 +109,27 @@ public class Menu {
 			}else if(t==3){
 				menu();
 			}else{
-				System.out.println("Voce nao digitou uma opÁao valida");
+				System.out.println("Voce nao digitou uma op√ßao valida");
 				exibicao();
 			}
 			scan.close();
 		}
 		
 		private void exibicaoConsole(){
-			//FUN«√O
-			System.out.println("ExibiÁ„o no console");
+			//FUN√á√ÉO
+			System.out.println("Exibi√ß√£o no console");
 			flag = false;
 		}
 		
 		private void exibicaoArquivo(){
-			//FUN«√O
-			System.out.println("ExibiÁ„o via arquivo");
+			//FUN√á√ÉO
+			System.out.println("Exibi√ß√£o via arquivo");
 			flag = false;
 		}
 	//
 	//
 	//	
-	//FIM DA EXIBI«√O
+	//FIM DA EXIBI√á√ÉO
 		
 		
 		
@@ -148,7 +149,7 @@ public class Menu {
 	
 		
 		
-	//REMO«√O
+	//REMO√á√ÉO
 	//
 	//
 	//
@@ -160,7 +161,7 @@ public class Menu {
 	//
 	//
 	//	
-	//FIM DA REMO«√O
+	//FIM DA REMO√á√ÉO
 
 		
 	}
