@@ -218,7 +218,7 @@ public class Menu {
 			if(t == 1){
 				//LISTA TODOS OS NOMES DE TODAS AS EMPRESAS
 			}else if(t==2){
-				//LISTA TODOS OS TELEFONE DE TODAS AS EMPRESAS
+				//LISTA TODOS OS TELEFONES DE TODAS AS EMPRESAS
 			}else if(t==3){
 				//LISTA TODAS AS AREAS DE TODAS AS EMPRESAS
 			}else if(t==4){
@@ -432,8 +432,30 @@ public class Menu {
 	//
 	//
 		private void remocao(){
-			System.out.println("Digite o objeto a ser removido");
-			//FUNCAO
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Escolha o que quer remover:");
+			System.out.println("1-Empresa");
+			System.out.println("2-Funcionario");
+			System.out.println("3-Grupo");
+			System.out.println("4-Usuario");
+			System.out.println("5-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t == 1){
+				remocaoEmpresa();
+			}else if(t==2){
+				remocaoFuncionario();
+			}else if(t==3){
+				remocaoGrupo();
+			}else if(t==4){
+				remocaoUsuario();
+			}else if(t==5){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				remocao();
+			}
+
 			flag = false;
 		}
 	//
@@ -441,5 +463,85 @@ public class Menu {
 	//	
 	//FIM DA REMOÇÃO
 
+	
+	//REMOÇÃO EMPRESA
+	//
+	//
+	//
+		private void remocaoEmpresa(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome da Empresa que quer remover:");
+			t = (String)scan.nextLine();
+			System.out.println("Removendo...");
+			//FUNÇÃO REMOVE TUDO DA EMPRESA
+			System.out.println("Removido com sucesso!");
+			scan.close();
+		}
+	//
+	//
+	//	
+	//FIM DA REMOÇÃO EMPRESA
 		
+	
+	//REMOÇÃO FUNCIONARIO
+	//
+	//
+	//	
+		private void remocaoFuncionario(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome do Funcionário que quer remover:");
+			t = (String)scan.nextLine();
+			System.out.println("Removendo...");
+			//FUNÇÃO REMOVE TUDO DO FUNCIONARIO
+			System.out.println("Removido com sucesso!");
+			scan.close();
+			
+		}
+	//
+	//
+	//
+	//FIM DAS REMOÇÃO FUNCIONARIO
+		
+		
+	//REMOÇÃO GRUPO
+	//
+	//
+	//
+		private void remocaoGrupo(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome do Grupo que quer remover:");
+			t = (String)scan.nextLine();
+			System.out.println("Removendo...");
+			//FUNÇÃO REMOVE TUDO DO GRUPO
+			System.out.println("Removido com sucesso!");
+			scan.close();
+			//DEVERIA TER A OPÇÃO DE REMOVER USUARIOS DO GRUPO, ETC.
+		}
+	//
+	//
+	//
+	//FIM DAS REMOÇÃO GRUPO
+		
+		
+	//REMOÇÃO USUARIO
+	//
+	//
+	//		
+		private void remocaoUsuario(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome do Usuário que quer remover:");
+			t = (String)scan.nextLine();
+			System.out.println("Removendo...");
+			//FUNÇÃO REMOVE TUDO DO USUÁRIO
+			System.out.println("Removido com sucesso!");
+			scan.close();
+		}
+	//
+	//
+	//
+	//FIM DAS REMOÇÃO USUARIO
 	}
