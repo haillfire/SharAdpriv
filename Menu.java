@@ -57,7 +57,7 @@ public class Menu {
 			System.out.println("Digite o numero da funçao desejada:");
 			System.out.println("1-Inserçao Manual");
 			System.out.println("2-Inserçao via arquivo");
-			System.out.println("3-Voltar ao menu");
+			System.out.println("3-Voltar ao menu principal");
 			t = (int)scan.nextInt();
 			if(t==1){
 				insercaoManual();
@@ -100,7 +100,7 @@ public class Menu {
 			System.out.println("Digite o numero da funçao desejada:");
 			System.out.println("1-Exibiçao no console");
 			System.out.println("2-Exibiçao via arquivo");
-			System.out.println("3-Voltar ao menu");
+			System.out.println("3-Voltar ao menu principal");
 			t = (int)scan.nextInt();		
 			if(t==1){
 				exibicaoConsole();
@@ -138,10 +138,288 @@ public class Menu {
 	//
 	//
 		private void busca(){
-			System.out.println("Digite uma palavra para busca");
-			//FUNCAO
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Escolha o que quer buscar:");
+			System.out.println("1-Empresas");
+			System.out.println("2-Funcionarios");
+			System.out.println("3-Grupos");
+			System.out.println("4-Usuarios");
+			System.out.println("5-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t == 1){
+				buscaEmpresa();
+			}else if(t==2){
+				System.out.println("Digite o nome do funcionario:");
+				buscaFuncionario();
+			}else if(t==3){
+				System.out.println("Digite o nome do grupo:");
+				buscaGrupo();
+			}else if(t==4){
+				System.out.println("Digite o nome do usuario:");
+				buscaUsuario();
+			}else if(t==5){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				busca();
+			}
+			
+			
 			flag = false;
 		}
+		
+		//BUSCA EMPRESA
+		//
+		//
+		//
+		private void buscaEmpresa(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("O que voce sabe sobre a empresa?");
+			System.out.println("1-Nome");
+			System.out.println("2-Telefone");
+			System.out.println("3-Area");
+			System.out.println("4-Nada");
+			System.out.println("5-Voltar ao menu busca");
+			System.out.println("6-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t == 1){
+				buscaEmpresaNome();
+			}else if(t==2){
+				buscaEmpresaTelefone();
+			}else if(t==3){
+				buscaEmpresaArea();
+			}else if(t==4){
+				
+			}else if(t==5){
+				busca();
+			}else if(t==6){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				buscaEmpresa();
+			}
+		}
+		
+		
+		
+		private void buscaTudoEmpresa(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Entao, o que quer saber?");
+			System.out.println("1-Nome");
+			System.out.println("2-Telefone");
+			System.out.println("3-Area");
+			System.out.println("4-Voltar ao menu busca empresa");
+			System.out.println("5-Voltar ao menu busca");
+			System.out.println("6-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t == 1){
+				//LISTA TODOS OS NOMES DE TODAS AS EMPRESAS
+			}else if(t==2){
+				//LISTA TODOS OS TELEFONE DE TODAS AS EMPRESAS
+			}else if(t==3){
+				//LISTA TODAS AS AREAS DE TODAS AS EMPRESAS
+			}else if(t==4){
+				buscaEmpresa();
+			}else if(t==5){
+				busca();
+			}else if(t==6){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				buscaTudoEmpresa();
+			}
+		}
+		
+		
+		
+		private void buscaEmpresaNome(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome da empresa que quer buscar:");
+			t = (String)scan.nextLine();
+			//FUNÇAO QUE VAI MOSTRAR TODAS AS INFORMAÇOES DA(S) EMPRESA(S) COM ESSE NOME
+			scan.close();
+		}
+		
+		private void buscaEmpresaTelefone(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o telefone da empresa que quer buscar:");
+			t = (int)scan.nextInt();
+			//FUNÇAO QUE VAI MOSTRAR TODAS AS INFORMAÇOES DA EMPRESA COM ESSE TELEFONE
+			scan.close();
+		}
+		
+		private void buscaEmpresaArea(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite a area da empresa que quer buscar:");
+			t = (String)scan.nextLine();
+			//FUNÇAO QUE VAI MOSTRAR TODAS AS INFORMAÇOES DA(S) EMPRESA(S) COM ESSA AREA
+			scan.close();
+		}
+
+		//
+		//
+		//
+		//FIM DO BUSCA EMPRESA
+		
+		//BUSCA FUNCIONARIO
+		//
+		//
+		//
+		private void buscaFuncionario(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("O que voce sabe sobre o funcionario?");
+			System.out.println("1-Nome");
+			System.out.println("2-Ranking");
+			System.out.println("3-Nada");
+			System.out.println("4-Voltar ao menu busca");
+			System.out.println("5-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t==1){
+				buscaFuncionarioNome();
+			}else if(t==2){
+				buscaFuncionarioRanking();
+			}
+			else if(t == 3){
+				System.out.println("Aqui estao os nomes e seus respectivos rankings: ");
+				//LISTA TODOS OS NOMES E RANKINGS DE FUNCIONARIOS
+			}
+			else if(t == 4){
+				busca();
+			}else if(t == 5){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				buscaFuncionario();
+			}
+			scan.close();
+		}
+		
+		private void buscaFuncionarioNome(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome do funcionario:");
+			t = (String)scan.nextLine();
+			//LISTA TODOS OS FUNCIONARIOS E SEUS RESPECTIVOS RANKINGS COM ESSE NOME
+		}
+		
+		private void buscaFuncionarioRanking(){
+			int t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o ranking do funcionario:");
+			t = (int)scan.nextInt();
+			//LISTA TODOS OS FUNCIONARIOS E SEUS RESPECTIVOS RANKINGS COM ESSE RANKING
+		}
+		//
+		//
+		//
+		//FIM DO BUSCA FUNCIONARIO
+		
+		private void buscaGrupo(){
+			System.out.println("Listando aqui todos os grupos:");
+			//LISTA TODOS OS GRUPOS
+		}
+		
+		
+		
+		//BUSCA USUARIO
+		//
+		//
+		//
+		private void buscaUsuario(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("O que voce sabe sobre o usuario?");
+			System.out.println("1-Nome");
+			System.out.println("2-Area");
+			System.out.println("3-Telefone");
+			System.out.println("4-Nada");
+			System.out.println("5-Voltar ao menu busca");
+			System.out.println("6-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t==1){
+				buscaUsuarioNome();
+			}else if(t==2){
+				buscaUsuarioArea();
+			}else if(t==3){
+				buscaUsuarioTelefone();
+			}else if(t==4){
+				buscaTudoUsuario();
+			}else if(t==5){
+				busca();
+			}else if(t==6){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				buscaUsuario();
+			}
+		}
+		
+		private void buscaUsuarioNome(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o nome aqui:");
+			t = (String)scan.nextLine();
+			System.out.println("Listando...");
+			//LISTA OS NOMES E AREAS DOS USUARIOS COM ESSE NOME
+			scan.close();
+		}
+		
+		private void buscaUsuarioArea(){
+			String t;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite a area aqui:");
+			t = (String)scan.nextLine();
+			System.out.println("Listando...");
+			//LISTA OS NOMES E AREAS DOS USUARIOS COM ESSA AREA
+			scan.close();
+		}
+		
+		private void buscaUsuarioTelefone(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Digite o telefone aqui:");
+			t = (int)scan.nextInt();
+			System.out.println("Listando...");
+			//LISTA O NOME E AREA DO USUARIO COM ESSE TELEFONE
+			scan.close();
+		}
+		
+		private void buscaTudoUsuario(){
+			int t = 0;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Entao, o que voce quer saber?");
+			System.out.println("1-Nomes");
+			System.out.println("2-Areas");
+			System.out.println("3-Voltar ao menu de busca de usuario");
+			System.out.println("4-Voltar ao menu de busca");
+			System.out.println("5-Voltar ao menu principal");
+			t = (int)scan.nextInt();
+			if(t==1 || t==2){
+				System.out.println("Listando...");
+				//LISTA TODOS OS NOMES E AREAS
+			}else if(t==3){
+				buscaUsuario();
+			}else if(t==4){
+				busca();
+			}else if(t==5){
+				menu();
+			}else{
+				System.out.println("Voce nao digitou uma opçao valida");
+				buscaTudoUsuario();
+			}
+		}
+		//
+		//
+		//
+		//FIM DO BUSCA USUARIO
+			
 	//
 	//
 	//	
