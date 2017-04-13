@@ -15,5 +15,8 @@ public class grupo {
 		this.nome = nome;
 	}
 	
-	
+	public grupo(int id, String nome){
+		this.id = id;
+		this.nome = nome;
+	}
 }
