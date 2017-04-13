@@ -1,20 +1,32 @@
 
 public class Admin {
-	private int id;
-	private String permicoes_gerais;
-	
-	public int getId() {
-		return id;
+	public class admin {
+	    private int id;
+	    private String permissoesgerais;
+	    
+	    public int getId() {
+	        return id;
+	    }
+
+	    public void setId(int id) {
+	        this.id = id;
+	    }
+
+	    public String getPermissoesgerais() {
+	        return permissoesgerais;
+	    }
+
+	    public void setPermissoesgerais(String permissoesgerais) {
+	        this.permissoesgerais = permissoesgerais;
+	    }
+
+	        
+	    public admin(){}
+	    
+	    public admin (int id, String permissoesgerais){
+	        this.id = id; 
+	        this.permissoesgerais = permissoesgerais;
+	    }
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getPermicoes_gerais() {
-		return permicoes_gerais;
-	}
-	public void setPermicoes_gerais(String permicoes_gerais) {
-		this.permicoes_gerais = permicoes_gerais;
-	}
-	
 	
 }
