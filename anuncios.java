@@ -4,6 +4,7 @@ public class anuncios {
 	private String data;
 	private String anunciante;
 	private String area;
+	
 	public int getId() {
 		return id;
 	}
@@ -29,5 +30,11 @@ public class anuncios {
 		this.area = area;
 	}
 	
+	public anuncios(int id, String data, String anunciante, String area){
+		this.id = id;
+		this.data = data;
+		this.anunciante = anunciante;
+		this.area = area;
+	}
 	
 }
