@@ -1,9 +1,13 @@
-
 public class funcionario {
 	private int id;
 	private String nome;
-	private int raking;
+	private int ranking;
 	
+	public funcionario(int id, String nome, int ranking) {
+		this.id = id;
+		this.nome = nome;
+		this.ranking = ranking;
+	}
 	public int getId() {
 		return id;
 	}
@@ -16,11 +20,11 @@ public class funcionario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getRaking() {
-		return raking;
+	public int getRanking() {
+		return ranking;
 	}
-	public void setRaking(int raking) {
-		this.raking = raking;
+	public void setRanking(int ranking) {
+		this.ranking = ranking;
 	}
 	
 	
