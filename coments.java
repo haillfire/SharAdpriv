@@ -23,5 +23,10 @@ public class coments {
 		this.texto = texto;
 	}
 	
+	public coments(int id_coment, int id_usuario, String texto){
+		this.id_coment = id_coment;
+		this.id_usuario = id_usuario;
+		this.texto = texto;
+	}
 	
 }
