@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 public class Menu {
 	boolean flag = true;
@@ -80,7 +84,21 @@ public class Menu {
 		
 		private void insercaoArquivo(){
 			//FUNÇÃO
-			System.out.println("Inserçao via arquivo");
+	        Scanner ler = new Scanner(System.in);
+	        System.out.println("Informe o nome de arquivo texto:\n");
+	        String nome = ler.nextLine();
+	        String linha = null;
+	        try {
+	            BufferedReader lerArq = new BufferedReader(new InputStreamReader(new FileInputStream(nome)));
+	            String i = lerArq.readLine();
+	            while (i != null) {
+	                linha += i;
+	                i = lerArq.readLine();
+	            }
+	            lerArq.close();
+	        } catch (IOException e) {
+	            System.out.println("Erro na abertura do arquivo: " + e.getMessage());
+	        }
 			flag = false;
 		}
 	//
@@ -191,7 +209,7 @@ public class Menu {
 			}else if(t==3){
 				buscaEmpresaArea();
 			}else if(t==4){
-				
+				buscaTudoEmpresa();
 			}else if(t==5){
 				busca();
 			}else if(t==6){
