@@ -4,7 +4,7 @@ import java.util.List;
 
 public class comentsDAO {
 
-	private Connection conn;
+private Connection conn;
 	
 	public comentsDAO() {
         try {
@@ -22,7 +22,7 @@ public class comentsDAO {
             ResultSet result = stmt.executeQuery();
             while (result.next()) {
             	coments o = new coments(result.getInt("id_coment"), result.getInt("id_usuario"), result.getString("texto"));
-            	coments.add(o);
+            	listacoments.add(o);
             }
         } catch (SQLException erro) {
             System.out.println("Erro de conexao com o banco!");
