@@ -4,6 +4,14 @@ public class msg {
 	private int idmsg;
 	private int idrecebe;
 	private String texto;
+	
+	public msg(int id_envia, int idmsg, int idrecebe, String texto) {
+		this.id_envia = id_envia;
+		this.idmsg = idmsg;
+		this.idrecebe = idrecebe;
+		this.texto = texto;
+		
+	}
 	public int getId_envia() {
 		return id_envia;
 	}
@@ -27,7 +35,6 @@ public class msg {
 	}
 	public void setTexto(String texto) {
 		this.texto = texto;
-	}
-	
+	}	
 	
 }
